@@ -2,26 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .frcc {
+    @apply flex flex-row items-center justify-center;
+  }
+  .frcs {
+    @apply flex flex-row items-center  justify-start;
+  }
+  .frca {
+    @apply flex flex-row items-center  justify-around;
+  }
+  .frcb {
+    @apply flex flex-row items-center   justify-between;
+  }
+  .fccc {
+    @apply flex  flex-col items-center justify-center;
+  }
+  .fccs {
+    @apply flex  flex-col items-center justify-start;
+  }
+  .fcca {
+    @apply flex  flex-col items-center  justify-around;
+  }
+  .fccb {
+    @apply flex  flex-col items-center   justify-between;
+  }
+  .ScaleAnimation {
+    @apply hover:active:scale-95 transition-all duration-75 cursor-pointer;
+  }
+  .transition {
+    @apply transition-all duration-150;
+  }
+  .transition_Emoji {
+    @apply hover:scale-150 cursor-pointer transition-all duration-150;
+  }
+  .hoverUnderline {
+    @apply hover:underline cursor-pointer select-none;
+  }
+  .Chats_page_Nav {
+    @apply text-[15px] font-medium decoration-[#0A7CFF] underline-offset-[10px] decoration-2  hover:underline  cursor-pointer;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+#white-space {
+  white-space: pre-wrap;
+  font-family: "Roboto", sans-serif;
+}
+#Like:hover #ltext {
+  opacity: 1;
+}
+#Likethumbs:hover #reaction {
+  display: inline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#colours {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    81.84deg,
+    #0099ff -9.4%,
+    #a033ff 51.57%,
+    #ff5280 84.07%,
+    #ff7061 90.59%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
